@@ -370,7 +370,7 @@ export function readMetadataHeader(file: ArrayBuffer, pe: PEHeader, cor: Cor20He
         VersionString: str.replace("\x00", "")
     }
 }
-export function readUserStringStream(file: ArrayBuffer, table: StreamHeader): number[][] {
+export function readUserStringStream(file: ArrayBuffer, table: StreamHeader): string[] {
     let offset = table.Offset;
     let dv = new DataView(file, offset, table.Size);
     let ret = []
